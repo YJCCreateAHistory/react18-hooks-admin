@@ -1,0 +1,122 @@
+.container {
+	display: flex;
+	width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+	.ant-layout-sider {
+		box-sizing: border-box;
+	}
+	.ant-layout {
+
+		/* 防止 tabs 超出不收缩 */
+		overflow-x: hidden;
+		.ant-layout-content {
+      position: static !important;
+			box-sizing: border-box;
+			flex: 1;
+			padding: 10px 12px;
+			overflow-x: hidden;
+		}
+	}
+}
+
+.menu {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
+	height: 100%;
+	.logo-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 55px;
+		.logo-img {
+			width: 50px;
+			margin: 0;
+		}
+	}
+	.ant-menu-root {
+		flex: 1;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	/* 去除菜单 Loading 遮罩层 */
+	.ant-spin-nested-loading,
+	.ant-spin-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		.ant-spin {
+			max-height: 100% !important;
+		}
+		.ant-spin-container::after {
+			background: transparent !important;
+		}
+		.ant-spin-blur {
+			overflow: auto !important;
+			clear: none !important;
+			opacity: 1 !important;
+		}
+	}
+}
+.ant-layout-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  background: #fff;
+	border-bottom: 1px solid #f6f6f6;
+	.header-lf {
+		display: flex;
+		align-items: center;
+		.collapsed {
+			margin-right: 20px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: color 0.3s;
+		}
+	}
+	.header-ri {
+		display: flex;
+		align-items: center;
+		.icon-style {
+			margin-right: 22px;
+			font-size: 19px;
+			line-height: 19px;
+			cursor: pointer;
+      margin-top:28px;
+		}
+		.username {
+			margin: 0 20px 0 0;
+			font-size: 15px;
+		}
+		.ant-avatar {
+			cursor: pointer;
+		}
+	}
+}
+.theme-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 25px 0;
+	span {
+		font-size: 14px;
+	}
+	.ant-switch {
+		width: 46px;
+	}
+}
+.divider {
+	margin: 0 0 22px !important;
+	font-size: 15px !important;
+	.anticon {
+		margin-right: 10px;
+	}
+}
+.ant-divider-with-text::before,
+.ant-divider-with-text::after {
+	border-top: 1px solid #dcdfe6 !important;
+}

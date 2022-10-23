@@ -1,0 +1,11 @@
+.tableList {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  padding: 20px;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+  overflow-y: auto;
+}
